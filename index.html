@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Basic Video Call -- Agora</title>
+  <link rel="stylesheet" href="./vendor/bootstrap.min.css">
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+
+
+  <div id="success-alert" class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Congratulations!</strong><span> You can invite others join this channel by click </span><a href="" target="_blank">here</a>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div id="success-alert-with-token" class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Congratulations!</strong><span> Joined room successfully. </span>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div id="success-alert-with-token" class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Congratulations!</strong><span> Joined room successfully. </span>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  
+  <div class="container">
+    <form id="join-form">
+      <div class="row join-info-group">
+     
+      
+            <input id="appid" type="text" placeholder="enter appid" value="008547b1140348e5b1a091f256922ed6" hidden required>
+   
+
+          <div class="col-sm">
+            <p class="join-info-text">Channel</p>
+            <input id="channel" type="text" placeholder="enter channel name" required>
+        
+          </div>
+      </div>
+
+      <div class="button-group">
+        <button id="join" type="submit" class="btn btn-primary btn-sm">Join</button>
+        <button id="leave" type="button" class="btn btn-primary btn-sm" disabled>Leave</button>
+      </div>
+    </form>
+
+    <div class="row video-group">
+      <div class="col" id="smallplayer">
+        <p id="local-player-name" class="player-name1"></p>
+        <div id="local-player" class="player2"></div>
+      </div>
+      <style>
+        #smallplayer{
+        
+          margin-left: 80%;
+          margin-bottom: -300px;
+         
+          z-index: 11 !important;
+        }
+       .player-name1{
+        position: relative;
+        bottom: -40px;
+        left: 10px;
+        z-index: 10 !important;
+        font-size: small;
+       }
+       .player-name{
+        position: relative;
+        bottom: -40px;
+        left: 10px;
+        z-index: 10 !important;
+        
+       }
+        .player2{
+          width: 110%;
+          height: 120px;
+        }
+        .player1{
+          width: 100%;
+          height: 600px !important;
+          margin-bottom: 200px;
+        }
+        @media (max-width: 640px) {
+          .player2{
+          width: 70%;
+          height: 120px;
+        }
+          #smallplayer{
+        
+        margin-left: 30%;
+        margin-bottom: -300px;
+        z-index: 11 !important;
+      }
+  .player1 {
+    width: 420px;
+    height: 290px;
+  }
+
+
+}
+@media (max-width: 440px) {
+          .player2{
+          width: 70%;
+          height: 120px;
+        }
+          #smallplayer{
+        
+        margin-left: 30%;
+        margin-bottom: -300px;
+        z-index: 11 !important;
+      }
+  .player1 {
+    width: 320px;
+    height: 190px;
+  }
+
+
+}
+
+      </style>
+      <div class="w-100"></div>
+      <div class="col">
+        <div id="remote-playerlist"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./vendor/jquery-3.4.1.min.js"></script>
+  <script src="./vendor/bootstrap.bundle.min.js"></script>
+  <script src="./AgoraRTC_N-4.18.2.js"></script>
+  <script src="./index.js"></script>
+</body>
+</html>
